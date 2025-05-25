@@ -2,33 +2,33 @@ window.human = false;
 
 var canvasEl = document.querySelector('.fireworks');
 var ctx = canvasEl.getContext('2d');
-var numberOfParticulas = 30;
+var numberOfParticules = 30;
 var pointerX = 0;
-var pointesY = 0;
-var tap = ('ontouchstart' in window || navigator.msMaxtouchPoints) ? 'touchstart' : 'mousedown';
+var pointerY = 0;
+var tap = ('ontouchstart' in window || navigator.msMaxTouchPoints) ? 'touchstart' : 'mousedown';
 var colors = ['#FF1461', '#18FF92', '#5A87FF', '#FBF38C'];
 
-function setCancasSize() {
-    canvasEl.width = window.innerWidth * 2;
-    canvasEl.height = window.innerHeight * 2 ;
-    canvasEl.style.width = window.innerWidth + 'px';
-    canvasEl.style.height = window.innerHeight + 'px';
-    canvasEl.getContesxt('2d').scale(2,2);
+function setCanvasSize() {
+  canvasEl.width = window.innerWidth * 2;
+  canvasEl.height = window.innerHeight * 2;
+  canvasEl.style.width = window.innerWidth + 'px';
+  canvasEl.style.height = window.innerHeight + 'px';
+  canvasEl.getContext('2d').scale(2, 2);
 }
 function updateCoords(e) {
     pointerX = e.clientX || e.touches[0].clientX;
     pointerY = e.clientY || e.touches[0].clientY;
   }
   
-    function setParticuleDirection(p) {
-        var angle = anime.random(0, 360) * Math.PI / 180;
-        var value = anime.random(50, 180);
-        var radius = [-1, 1][anime.random(0, 1)] * value;
-        return {
-        x: p.x + radius * Math.cos(angle),
-        y: p.y + radius * Math.sin(angle)
-        }
+  function setParticuleDirection(p) {
+    var angle = anime.random(0, 360) * Math.PI / 180;
+    var value = anime.random(50, 180);
+    var radius = [-1, 1][anime.random(0, 1)] * value;
+    return {
+      x: p.x + radius * Math.cos(angle),
+      y: p.y + radius * Math.sin(angle)
     }
+  }
   
   function createParticule(x, y) {
     var p = {};
