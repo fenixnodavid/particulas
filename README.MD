@@ -4,3 +4,5 @@ comiendo del proyecto particulas</h1>
 <br><strong>Aqui esta el enlace paera la ejecuacion del programa: https://fenixnodavid.github.io/particulas/ <strong><br>
 <br><strong>
 Aqui esta el enlace a la wiki de JavaScript: https://github.com/fenixnodavid/particulas.wiki.git</br><strong>
+<br><strong>
+Ahora por ultimo aqui esta la wiki del codigo HTML: https://github.com/fenixnodavid/particulas/wiki/Wiki-JavaScript </strong></br>
